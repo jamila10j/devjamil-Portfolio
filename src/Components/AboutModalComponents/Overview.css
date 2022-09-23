@@ -1,0 +1,75 @@
+.overview {
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    width: 100%;
+    flex-grow: 1;
+    display: inline-flex;
+}
+
+#overview-img {
+    transform: rotate(15deg);
+    -webkit-filter: drop-shadow(2px 2px 2px #222);
+    filter: drop-shadow(2px 2px 2px #222);
+    height: 100px;
+    width: 100px;
+}
+
+#overviewGraphic {
+    -webkit-filter: drop-shadow(2px 2px 2px #222);
+    filter: drop-shadow(2px 2px 2px #222);
+}
+
+
+.cards {
+    list-style-type: none;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.cards li {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#overviewCards {
+    font-weight: 500;
+}
+
+.overview-card {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    flex-grow: 0.3;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 2px rgb(0 0 0 / 30%);
+    padding: 10px;
+    font-family: -apple-system, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#card1Overview {
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+#card2Overview {
+    background: linear-gradient(97deg, #c9c721, #53d1d1);
+}
+
+#card3Overview {
+    background: linear-gradient(295deg, #d8b451, #d82dad);
+}
+
+#card4Overview {
+    background: linear-gradient(to right, #ff512f, #f09819);
+}

@@ -1,0 +1,225 @@
+.workExperience {
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    list-style-type: none;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.cards li {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#collapsable {
+    position: absolute;
+    transform: translate(-18px, -15px);
+}
+
+.row {
+    width: 100%;
+    flex-grow: 0.5;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.col-workEXP {
+    flex-grow: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+
+.stats {
+    width: 80%;
+    height: 40%;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 2px rgb(0 0 0 / 30%);
+    text-align: center;
+    position: relative;
+    padding: 15px;
+    font-weight: 600;
+}
+
+#stat1 {
+    background: rgb(255,0,204);
+    background: linear-gradient(145deg, rgba(255,0,204,0.8995973389355743) 0%, rgba(255,117,0,0.9023984593837535) 32%, rgba(255,0,204,0.9) 100%); 
+}
+#stat1 h3 {
+    margin: 0px;
+}
+#stat1 p {
+    margin: 0px;
+}
+
+
+#stat2 {
+    background: rgb(0,121,255);
+    background: linear-gradient(145deg, rgba(0,121,255,1) 0%, rgba(158,0,255,1) 28%, rgba(119,30,255,1) 58%, rgba(0,121,255,1) 100%);
+}
+#stat2 h3 {
+    margin: 0px;
+}
+#stat2 p {
+    margin: 0px;
+}
+
+
+#stat3 {
+    background: rgb(0,224,255);
+    background: linear-gradient(145deg, rgba(0,224,255,1) 0%, rgba(46,255,30,1) 59%, rgba(0,224,255,1) 71%, rgba(0,224,255,1) 100%);
+}
+#stat3 h3 {
+    margin: 0px;
+}
+#stat3 p {
+    margin: 0px;
+}
+
+.exp-card {
+    width: 95%;
+    height: 100%;
+    flex-grow: 0.3;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 2px rgb(0 0 0 / 30%);
+    padding: 10px;
+    font-family: -apple-system, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+}
+
+#card1Work {
+    background: rgb(125,125,125);
+    background: linear-gradient(145deg, rgba(125,125,125,1) 0%, rgba(62,112,6,1) 32%, rgba(62,112,6,1) 37%, rgba(125,125,125,1) 98%);
+}
+
+.exp-name {
+    display: inline-flex;
+    height: 40px;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+.exp-name h4 {
+    margin: 0;
+}
+
+.exp-name h6 {
+    margin: 0;
+}
+
+
+#exp-card1Content-expanded {
+    display: contents;
+}
+
+#exp-card1Content-collapsed {
+    display: none;
+}
+
+
+.exp-card-InnerRow {
+    display: inline-flex;
+}
+
+.col-exp-list {
+    flex-grow: 0.5;
+    padding: 5px;
+}
+
+#from {
+    margin: 0;
+}
+
+#to {
+    margin-bottom: 10px;
+    margin-top: 0;
+    min-width: max-content;
+}
+
+.skillsAttained {
+    background-color: antiquewhite;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 2px rgb(0 0 0 / 30%);
+    padding: 10px;
+}
+
+.skillsAttained h3 {
+    margin: 0;
+}
+
+.skillsAttained #skills-list {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skillsAttained #skills-list li {
+    height: 50px;
+    width: 80%;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    box-shadow: 1px 1px 2px 2px rgb(0 0 0 / 30%);
+    font-size: 22px;
+    min-width: fit-content;
+}
+
+@media (max-width: 900px) {
+    .exp-name {
+        display: inline-flex;
+        height: 40px;
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+        font-size: calc(10px + 1.5vw);
+        justify-content: space-between;
+    }
+
+    .skillsAttained {
+        overflow: hidden;
+    }
+
+    .skillsAttained #skills-list li {
+        font-size: calc(10px + 1.5vw);
+    }
+}
+
+@media (max-width: 500px) {
+    #row1 {
+        width: 100%;
+        flex-grow: 0.5;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 315px) {
+    .exp-card-InnerRow {
+        display: inline-flex;
+        margin-top: 15px;
+    }
+}
