@@ -90,10 +90,10 @@ function AboutWindow(props)
 
 
     const fullscreenWindow = () => {
-        props.MaximizeFunction(props.MaximizedState, props.MaximizeStateSetter);
         const aboutWindow = document.getElementById('aboutWindow');
         
         document.documentElement.style.setProperty('--currentWindow', aboutWindow.style.transform);
+        console.log(aboutWindow.style.transform);
 
         //document.documentElement.style.setProperty('--windowPosition_About', aboutWindow.style.transform);
 

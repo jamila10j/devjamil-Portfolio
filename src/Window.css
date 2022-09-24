@@ -971,28 +971,27 @@
 }
 
 .maximizing {
-    animation: maximize 1s ease-out;
     height: 100%;
     width: 100%;
     transform-origin: 50% 50%;
 
-    /*THIS TRANSFORM IS CAUSING ANIMATION TO LOOK JARRING*/
-    transform: translate(0, 0)!important;
+    transform: translate(0px, 0px)!important;
+    animation: maximize 1s ease-out;
 }
 
 @keyframes maximize {
     0% {
         height: 400px;
         width: 900px;
-        transform: var(--currentWindow);
-        -webkit-transform: var(--currentWindow);
+        transform: var(--currentWindow)!important;
+        -webkit-transform: var(--currentWindow)!important;
         transform-origin: 50% 50%;
     }
     100% {
         height: 100%;
         width: 100%;
-        transform: translate(0, 0)!important;
-        -webkit-transform: translate(0, 0)!important;
+        transform: translate(0px, 0px)!important;
+        -webkit-transform: translate(0px, 0px)!important;
         transform-origin: 50% 50%;
     }
 }
@@ -1016,8 +1015,6 @@
     100% {
         height: 400px;
         width: 900px;
-        /* left: 0!important;
-        top: 0!important;  */
         transform: var(--currentWindow);
         -webkit-transform: var(--currentWindow);
         transform-origin: 50% 50%;
