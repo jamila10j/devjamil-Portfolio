@@ -40,7 +40,7 @@
 }
 
 #overviewCards {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .overview-card {
@@ -56,6 +56,10 @@
     overflow: hidden;
     align-items: center;
     justify-content: space-around;
+}
+
+.overview-card p {
+    margin: 16px 10px;
 }
 
 #card1Overview {

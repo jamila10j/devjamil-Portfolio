@@ -4,7 +4,6 @@ import { ReactComponent as AppDev } from '../../assets/WindowIcons/AboutWindow/H
 import { ReactComponent as Controller } from '../../assets/WindowIcons/AboutWindow/HobbiesInterestsComponentIcons/Controller.svg'
 import { ReactComponent as VideoGames } from '../../assets/WindowIcons/AboutWindow/HobbiesInterestsComponentIcons/VideoGames.svg'
 import { ReactComponent as Plane } from '../../assets/WindowIcons/AboutWindow/HobbiesInterestsComponentIcons/Plane.svg'
-import { ReactComponent as Spotify } from '../../assets/WindowIcons/AboutWindow/HobbiesInterestsComponentIcons/Spotify.svg'
 
 
 const HobbiesInterests = () => {
@@ -48,7 +47,7 @@ const HobbiesInterests = () => {
 
                     <li>
                         
-                        <div className='skillRow' id='row2'>
+                        <div className='skillRow' id='row3'>
                             
                             <div className='skill-card' id='hiCard2'>
  
@@ -78,9 +77,9 @@ const HobbiesInterests = () => {
 
                     <li>
                         
-                        <div className='skillRow' id='row2'>
+                        <div className='skillRow' id='row4'>
                             
-                            <div className='skill-card' id='hiCard2'>
+                            <div className='skill-card' id='hiCard3'>
  
                                 <div className='hi-name'>
                                     <h4>Video games</h4>
@@ -106,9 +105,9 @@ const HobbiesInterests = () => {
 
                     <li>
                         
-                        <div className='skillRow' id='row2'>
+                        <div className='skillRow' id='row5'>
                             
-                            <div className='skill-card' id='hiCard3'>
+                            <div className='skill-card' id='hiCard4'>
  
                                 <div className='hi-name'>
                                     <h4>Flight Simulation</h4>
@@ -124,28 +123,6 @@ const HobbiesInterests = () => {
                                     </ul>
 
                                     <Plane className="hi-graphic" height={'100px'} width={'100px'} />
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </li>
-
-                    <li>
-                        
-                        <div className='skillRow' id='row2'>
-                            
-                            <div className='skill-card' id='hiCard3'>
- 
-                                <div className='hi-name'>
-                                    <h4>Music</h4>
-                                </div>
-
-                                <div className='hi-content'>
-                                    <p>I am an avid music listener.</p>
-
-                                    <Spotify className="hi-graphic" height={'100px'} width={'100px'} />
                                 </div>
 
                             </div>

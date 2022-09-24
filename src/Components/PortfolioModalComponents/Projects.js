@@ -71,7 +71,7 @@ const Projects = (props) => {
     }
 
     const githubExt = () => {
-        window.open("https://www.google.com", "_blank");
+        window.open("https://github.com/jamila10j/devjamil-Portfolio", "_blank");
     }
 
     const githubSmoothie = () => {
@@ -304,8 +304,8 @@ const Projects = (props) => {
                                                 <div className='col-proj-list'>
 
                                                     <p>
-                                                        Developed for It's Worth More, LLC. This desktop application detects all hardware connected in a computer.
-                                                        and allows users to test various hardware components, such as microphones, cameras, and bluetooth, to ensure 
+                                                        Developed for It's Worth More, LLC. This desktop application detects all interal computer hardware
+                                                        and allows users to test various components such as microphones, cameras, and bluetooth, to ensure 
                                                         proper functionality. 
                                                     </p>
 

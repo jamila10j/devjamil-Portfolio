@@ -29,6 +29,8 @@ function Desktop(props)
     const [portfolioTabRequest, setPortfolioTabRequest] = useState(null);
     const [contactTabRequest, setContactTabRequest] = useState(null);
 
+    let darkMode = props.Style;
+
     
     const closeFunction = (currentState, setCurrentState) => {
         setCurrentState(currentState => !currentState);
@@ -196,19 +198,19 @@ function Desktop(props)
 
                     <div className='desktop' id='desktopContainer'>
 
-                        <div className='desktopIconContainer'>
+                        <div className={darkMode ? 'desktopIconContainerDark' : 'desktopIconContainer'}>
                             <ul className='mainBodyIconList'>
                                 <li>
-                                    <span onClick={openAboutWindow}><AboutSVG />
+                                    <span onClick={openAboutWindow}><AboutSVG className='desktopIcon'/>
                                     </span>About
                                 </li>
                                 <li>
-                                    <span onClick={openPortfolioWindow}><PortfolioSVG ShowModal={showPortfolioModal} />
+                                    <span onClick={openPortfolioWindow}><PortfolioSVG className='desktopIcon' ShowModal={showPortfolioModal} />
                                     </span>Portfolio
                                 </li>
                                 <li>
-                                    <span onClick={openContactWindow}><ContactSVG ShowModal={showContactModal} />
-                                    </span>Contact
+                                    <span onClick={openContactWindow}><ContactSVG className='desktopIcon' ShowModal={showContactModal} />
+                                    </span>Contact 
                                 </li>
                             </ul>
                         </div>
@@ -271,20 +273,20 @@ function Desktop(props)
                     </div>
 
                 <TaskBar 
-                    Style={props.Style}
-                    InfoModalIsOpen={showInfoModal}
-                    AboutModalIsOpen={showAboutModal} 
-                    PorfolioModalIsOpen={showPortfolioModal} 
-                    ContactModalIsOpen={showContactModal} 
-                    MinimizeFunction={minimizeFunction}
-                    InfoMinimized={infoMinimized}
-                    InfoMinimizeStateSetter={setInfoMinimized}
-                    AboutMinimized={aboutMinimized}
-                    AboutMinimizeStateSetter={setAboutMinimized}
-                    PortfolioMinimized={portfolioMinimized}
-                    PortfolioMinimizeStateSetter={setPortfolioMinimized}
-                    ContactMinimized={contactMinimized}
-                    ContactMinimizeStateSetter={setContactMinimized} 
+                    Style={darkMode}
+                    InfoModaOpen={showInfoModal}
+                    AboutModalOpen={showAboutModal} 
+                    PorfolioModalOpen={showPortfolioModal} 
+                    ContactModalOpen={showContactModal} 
+                    // MinimizeFunction={minimizeFunction}
+                    // InfoMinimized={infoMinimized}
+                    // InfoMinimizeStateSetter={setInfoMinimized}
+                    // AboutMinimized={aboutMinimized}
+                    // AboutMinimizeStateSetter={setAboutMinimized}
+                    // PortfolioMinimized={portfolioMinimized}
+                    // PortfolioMinimizeStateSetter={setPortfolioMinimized}
+                    // ContactMinimized={contactMinimized}
+                    // ContactMinimizeStateSetter={setContactMinimized} 
                     WindowRequestFunction={windowRequest} />
 
             </div>

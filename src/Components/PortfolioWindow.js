@@ -54,7 +54,7 @@ function PortfolioWindow(props)
         setPortfolioMaximized(false);
         setSortOldestFirst(false);
         setTabIndex(0);
-        setOpenAnim(false);
+        setOpenAnim(true);
     }
 
 
@@ -113,13 +113,13 @@ function PortfolioWindow(props)
     }
 
     const toggleWindowMenu = () => {
-        let sidebarMenu = document.getElementById('windowTabs');
+        let sidebarMenu = document.getElementById('windowTabsPortfolio');
 
         sidebarMenu.classList.toggle('toggled');
     }
 
     const closeWindowMenu = () => {
-        let sidebarMenu = document.getElementById('windowTabs');
+        let sidebarMenu = document.getElementById('windowTabsPortfolio');
 
         sidebarMenu.classList.remove('toggled');
     }
@@ -348,7 +348,7 @@ function PortfolioWindow(props)
                                         <h3 className={darkMode ? 'sideBarNameH3Dark' : 'sidebarNameH3'}>{windowTitle}</h3>
                                     </div>
 
-                                    <div className='modalSidebarOptions' id='windowTabs'>
+                                    <div className='modalSidebarOptions' id='windowTabsPortfolio'>
                                         <table id='sidebarOptionsTable'>
                                             <TabList className='sidebar-tabs'>
                                                 <tr id={tabIndex === 0 ? darkMode ? 'selectedTabDark' : 'selectedTab' : ''}>
@@ -356,8 +356,6 @@ function PortfolioWindow(props)
                                                         <Tab><button value={0} className={darkMode ? 'optionButtonDark' : 'optionButton'} onClick={updateTab}><ProjectsIcon />Projects</button></Tab>                                 
                                                     </td>
                                                 </tr>
-                                                {/* 
-                                                 */}
                                             </TabList>
                                         </table>
                                     </div>

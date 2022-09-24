@@ -33,7 +33,7 @@ const WorkExperience = () => {
                     </div>
                     <div className='col-workEXP'>
                         <div className='stats' id='stat2'>
-                            <h3>100,000+</h3>
+                            <h3>25,000+</h3>
                             <p>lines of code written</p>
                         </div>
                     </div>

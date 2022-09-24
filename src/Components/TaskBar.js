@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Taskbar.css';
-import { ReactComponent as Message } from '../assets/TaskbarIcons/contact-app.svg';
+import { ReactComponent as Message } from '../assets/TaskbarIcons/message-app.svg';
 import { ReactComponent as Twitter } from '../assets/TaskbarIcons/twitter-app.svg';
 import { ReactComponent as LinkedIn } from '../assets/TaskbarIcons/linkedin-app.svg';
 import { ReactComponent as Projects } from '../assets/TaskbarIcons/Projects-app.svg';

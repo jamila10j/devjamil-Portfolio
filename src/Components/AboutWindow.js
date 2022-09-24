@@ -61,7 +61,7 @@ function AboutWindow(props)
         setAboutMaximized(false);
         setSortOldestFirst(false);
         setTabIndex(0);
-        setOpenAnim(false);
+        setOpenAnim(true);
     }
 
 
@@ -93,7 +93,6 @@ function AboutWindow(props)
         const aboutWindow = document.getElementById('aboutWindow');
         
         document.documentElement.style.setProperty('--currentWindow', aboutWindow.style.transform);
-        console.log(aboutWindow.style.transform);
 
         //document.documentElement.style.setProperty('--windowPosition_About', aboutWindow.style.transform);
 
@@ -122,13 +121,13 @@ function AboutWindow(props)
     }
 
     const toggleWindowMenu = () => {
-        let sidebarMenu = document.getElementById('windowTabs');
+        let sidebarMenu = document.getElementById('windowTabsAbout');
 
         sidebarMenu.classList.toggle('toggled');
     }
 
     const closeWindowMenu = () => {
-        let sidebarMenu = document.getElementById('windowTabs');
+        let sidebarMenu = document.getElementById('windowTabsAbout');
 
         sidebarMenu.classList.remove('toggled');
     }
@@ -315,6 +314,7 @@ function AboutWindow(props)
         else
         {
             updateFocusedWindow();
+
             setTimeout(() => {
                 setOpenAnim(false);
             }, 200) 
@@ -337,7 +337,7 @@ function AboutWindow(props)
         <React.Fragment>
             {modalOpen ?
                 <Draggable handle={".windowFunctions"} cancel={'[class*="MuiDialogContent-root"]'} disabled={aboutMaximized ? true : false} bounds='.mainBody'>
-                    <div className={openAnim ? "window-openAnim" : "window"} id='aboutWindow' onClick={updateFocusedWindowOnClick}>
+                    <div className={openAnim ? "window-openAnim" : "window"} id='aboutWindow' onClick={updateFocusedWindowOnClick} >
                         <div className='modalContent'>
 
                             <Tabs className='TabsContainer' selectedIndex={tabIndex}>
@@ -362,7 +362,7 @@ function AboutWindow(props)
                                         <h3 className={darkMode ? 'sideBarNameH3Dark' : 'sidebarNameH3'}>{windowTitle}</h3>
                                     </div>
 
-                                    <div className='modalSidebarOptions' id='windowTabs'>
+                                    <div className='modalSidebarOptions' id='windowTabsAbout'>
                                         <table id={darkMode ? 'sidebarOptionsTableDark' : 'sidebarOptionsTable'}>
                                             <TabList className='sidebar-tabs'>
                                                 <tr id={tabIndex === 0 ? darkMode ? 'selectedTabDark' : 'selectedTab' : ''}>

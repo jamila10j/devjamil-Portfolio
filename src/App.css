@@ -244,6 +244,21 @@
   width: 10%;
   position: absolute;
   right: 0px;
+  color: black;
+  font-weight: 600;
+}
+
+.desktopIconContainerDark {
+  height: 85%;
+  width: 10%;
+  position: absolute;
+  right: 0px;
+  color: white;
+  font-weight: 600;
+}
+
+.desktopIcon {
+  filter: drop-shadow(1px 1px 1px #222);
 }
 
 .mainBodyIconList {
@@ -253,7 +268,7 @@
 }
 
 .mainBodyIconList li {
-  /*margin-top: 3vh;*/
+  margin-top: 15px;
 }
 
 
@@ -265,11 +280,6 @@
   display: flex;
   align-items: center;
 }
-
-/* .maximized {
-  height: 100%;
-  width: 100%;
-} */
 
 @media (max-width: 1000px) {
   .desktopIconContainer {

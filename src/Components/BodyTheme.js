@@ -26,8 +26,6 @@ function BodyTheme(props)
           }
           element.svgatorPlayer.play();
           setWasInDarkMode(true);
-          console.log(wasInDarkMode);
-
         }
         else if (wasInDarkMode)
         {

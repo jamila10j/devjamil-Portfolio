@@ -303,6 +303,10 @@
     transition: background 0.5s ease-out;
 }
 
+.sidebarIcon {
+    z-index: -1;
+}
+
 
 
 .windowFunctions {
@@ -685,6 +689,7 @@
     height: 20px;
     width: 20px;
     padding-right: 5px;
+    z-index: -1;
 }
 
 .informationWindow {
@@ -695,8 +700,6 @@
     border-radius: 15px;
     animation: windowZoom 0.2s ease-out;
     position: absolute;
-    /* top: 25%!important;
-    left: 25%!important; */
 }
 
 .infoTabsContainer {
@@ -1044,6 +1047,17 @@
         font-size: smaller;
     }
 
+    .window-openAnim {
+        height: 100%;
+        width: 100%;
+        box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 30%);
+        border-radius: 15px;
+        overflow: hidden;
+        animation: windowZoom 0.2s ease-out;
+        font-size: smaller;
+        transform: translate(0, 0)!important;
+    }
+
     .TabsContainer {
         flex-direction: column;
     }
@@ -1088,6 +1102,27 @@
         overflow-x: hidden;
     }
 }
+
+
+@media (max-width: 650px) {
+
+    .windowSort-dropdown {
+        display: none;
+        position: absolute;
+        background-color: rgb(251, 246, 250, 0.85);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        border-radius: 10px;
+        margin-top: 1px;
+        padding: 5px;
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        transform: translate(-35%, 0px);
+    }
+
+}
+
 
 @media (max-width: 600px) {
     /*INFO WINDOW */

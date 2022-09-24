@@ -58,7 +58,7 @@ function ContactWindow(props)
         setContactMaximized(false);
         setSortOldestFirst(false);
         setTabIndex(0);
-        setOpenAnim(false);
+        setOpenAnim(true);
     }
 
     const handleMouseOverClose = (closeBtnHover) => {
@@ -117,13 +117,13 @@ function ContactWindow(props)
 
 
     const toggleWindowMenu = () => {
-        let sidebarMenu = document.getElementById('windowTabs');
+        let sidebarMenu = document.getElementById('windowTabsContact');
 
         sidebarMenu.classList.toggle('toggled');
     }
 
     const closeWindowMenu = () => {
-        let sidebarMenu = document.getElementById('windowTabs');
+        let sidebarMenu = document.getElementById('windowTabsContact');
 
         sidebarMenu.classList.remove('toggled');
     }
@@ -294,7 +294,6 @@ function ContactWindow(props)
     useEffect(() => {
         if (props.ContactTabRequest !== null)
         {
-            console.log(props.ContactTabRequest);
             setTabIndex(props.ContactTabRequest);
         }
     }, [modalOpen, props.ContactTabRequest])
@@ -329,7 +328,7 @@ function ContactWindow(props)
                                     <h3 className={darkMode ? 'sideBarNameH3Dark' : 'sidebarNameH3'}>{windowTitle}</h3>
                                 </div>
 
-                                <div className='modalSidebarOptions' id='windowTabs'>
+                                <div className='modalSidebarOptions' id='windowTabsContact'>
                                     <table id='sidebarOptionsTable'>
                                         <TabList className='sidebar-tabs'>
                                             <tr id={tabIndex === 0 ? darkMode ? 'selectedTabDark' : 'selectedTab' : ''}>

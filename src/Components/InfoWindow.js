@@ -8,6 +8,7 @@ import {ReactComponent as ModalClose} from '../assets/WindowPane/ModalClose.svg'
 import {ReactComponent as ModalCloseHover} from '../assets/WindowPane/ModalCloseHover.svg';
 import {ReactComponent as DisabledFullscreen} from '../assets/WindowPane/ModalFullscreenDisabled.svg';
 import {ReactComponent as DisabledMinimize} from '../assets/WindowPane/ModalFullscreenDisabled.svg';
+import Logo from '../assets/Logo/logo.png';
 
 import { RiInformationLine } from 'react-icons/ri'
 import { RiHistoryLine } from 'react-icons/ri'
@@ -121,15 +122,15 @@ const InfoWindow = (props) => {
                                     <TabPanel>
                                         <div className='info-overview'>
                                             <div className='infoOverview-graphic'>
-                                                <img id="infoImg" src="https://i.ibb.co/rk04QTf/logo.png" /> 
+                                                <img id="infoImg" src={Logo} />
                                             </div>
                                             
                                             <div className='infoOverview-content'>
                                                 <h1 className='infoWindow-Name'>devJamil - Portfolio</h1>
                                                 <p className='infoWindow-SubName'>Version 2.0</p>
 
-                                                <h5>Release - August 2022</h5>
-                                                <h5>Framework - React V18.2.0</h5>
+                                                <h5>Release - September 2022</h5>
+                                                <h5>Library - React V18.2.0</h5>
                                             </div>
                                             
                                         </div>
@@ -143,7 +144,7 @@ const InfoWindow = (props) => {
                                                     <p className='infoWindow-SubName'>2.0</p>
                                                 </div>
                                                 <div className='infoVersionHistory-Graphic'>
-                                                    <img id={tabIndex === 1 ? "navimg-VH" : 'navimg'} src="https://i.ibb.co/rk04QTf/logo.png" height="150px" width="150px" />
+                                                    <img id="navimg-VH" src={Logo} />
                                                 </div>
                                             </div>
                                             
@@ -158,7 +159,7 @@ const InfoWindow = (props) => {
                                                     </tr>
 
                                                     <tr>
-                                                        <td>8/30/22</td>
+                                                        <td>9/24/22</td>
                                                         <td>Version 2.0</td>
                                                     </tr>
 
