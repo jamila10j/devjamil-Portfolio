@@ -693,7 +693,6 @@
 }
 
 .informationWindow {
-    height: max-content;
     width: 600px;
     overflow: hidden;
     box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 30%);
@@ -1170,4 +1169,8 @@
         padding: 10px;
         flex-direction: column;
     }
+}
+
+_::-webkit-full-page-media, _:future, :root .safari_only {
+    property: value;
 }
