@@ -1128,6 +1128,9 @@
     .informationWindow {
         width: 100%;
         transform: translate(0, 0)!important;
+        box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 30%);
+        border-radius: 15px;
+        animation: windowZoom 0.2s ease-out;
     }
     .info-tabs {
         font-size: 1.5vh;
