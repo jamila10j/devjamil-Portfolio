@@ -30,7 +30,7 @@ import WorkExperience from './AboutModalComponents/WorkExperience';
 import Education from './AboutModalComponents/Education';
 import Skills from './AboutModalComponents/Skills';
 import HobbiesInterests from './AboutModalComponents/HobbiesInterests';
-import Resume from '../assets/FileDownloads/DevJamil-Resume2021.PDF';
+import Resume from '../assets/FileDownloads/DevJamil2022.pdf';
 
 import { BiMenu } from 'react-icons/bi';
 

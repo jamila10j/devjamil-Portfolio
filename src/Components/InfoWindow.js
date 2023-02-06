@@ -126,7 +126,7 @@ const InfoWindow = (props) => {
                                             </div>
                                             
                                             <div className='infoOverview-content'>
-                                                <h1 className='infoWindow-Name'>devJamil - Portfolio</h1>
+                                                <h1 className='infoWindow-Name'>DevJamil - Portfolio</h1>
                                                 <p className='infoWindow-SubName'>Version 2.0</p>
 
                                                 <h5>Release - September 2022</h5>

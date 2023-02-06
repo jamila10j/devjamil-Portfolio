@@ -4,6 +4,8 @@ import { BsGithub } from 'react-icons/bs'
 import { ReactComponent as CollapsedCard } from '../../assets/WindowIcons/PortfolioWindow/CollapsedCard.svg';
 import { ReactComponent as ExpandedCard } from '../../assets/WindowIcons/PortfolioWindow/ExpandedCard.svg';
 import hardware from '../../assets/WindowIcons/PortfolioWindow/diagnostic.png';
+import { ReactComponent as Inventory } from '../../assets/WindowIcons/PortfolioWindow/InventorySystem.svg';
+import { ReactComponent as PHP } from '../../assets/WindowIcons/PortfolioWindow/PHP.svg';
 import { ReactComponent as ReactSVG } from '../../assets/WindowIcons/PortfolioWindow/React.svg';
 import { ReactComponent as Smoothie } from '../../assets/WindowIcons/PortfolioWindow/Smoothie.svg';
 import { ReactComponent as C } from '../../assets/WindowIcons/PortfolioWindow/C.svg';
@@ -22,6 +24,7 @@ const Projects = (props) => {
     const [card3, setCard3] = useState(false);
     const [card4, setCard4] = useState(false);
     const [card5, setCard5] = useState(false);
+    const [card6, setCard6] = useState(false);
 
 
     const expandCard = (cardNum) => {
@@ -41,6 +44,9 @@ const Projects = (props) => {
                 break;
             case 5:
                 setCard5(true);
+                break;
+            case 6:
+                setCard6(true);
                 break;
             default:
                 return;
@@ -64,6 +70,9 @@ const Projects = (props) => {
                 break;
             case 5:
                 setCard5(false);
+                break;
+            case 6:
+                setCard6(false);
                 break;
             default:
                 return;
@@ -106,16 +115,16 @@ const Projects = (props) => {
 
                 <ul className='cards' id='projectCardList'>
 
-                    <li>
+                <li>
                         
                         <div className='project-row' id='row2'>
                             
-                            <div className='project-card' id='projectCard1'>
+                            <div className='project-card' id='projectCardIWMRepairs'>
                                 {card1 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(1)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(1)}/>}
  
                                 <div className='project-name'>
-                                    <h4>devJamil - Portfolio</h4>
-                                    <img id="projimg" src={Logo} />
+                                    <h4>It'sWorthMore Repairs: Inventory System</h4>
+                                    <Inventory id='inventory' height="50px" width="50px" />
                                 </div>
 
                                 <div id={card1 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
@@ -130,7 +139,67 @@ const Projects = (props) => {
                                             <div className='col-proj-list'>
 
                                                 <p>
-                                                    Inspired by macOS, my devJamil - Portfolio project was built from the ground up to showcase my skills with the React front-end 
+                                                    Developed for It'sWorthMore.com, LLC. This web application was built to track repair parts and orders,
+                                                    and team performance to minimize loss and reduce operating expenses. Functions include individual parts
+                                                    tracking, inventory count processing, reports generation, and team performace tracking.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div className='techStack'>          
+                                            <h3>Tech Stack</h3>
+                                            <ul id='techStack-list'>
+                                                <li>PHP <PHP height={'40px'} width={'40px'} /></li>
+                                                <li>MySQL <SQL height={'40px'} width={'40px'} /></li>
+                                            </ul>
+                                        </div>
+
+                                        <div className='view-external'>          
+                                            <h3>Ways to View</h3>
+                                            <ul id='view-list'>
+                                                <li>
+                                                    See Related 
+                                                    <Link id='link' />
+                                                    <div className='arrow' onClick={requestWorkExp} />
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+                        
+                        <div className='project-row' id='row2'>
+                            
+                            <div className='project-card' id='projectCard1'>
+                                {card2 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(2)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(2)}/>}
+ 
+                                <div className='project-name'>
+                                    <h4>DevJamil - Portfolio</h4>
+                                    <img id="projimg" src={Logo} />
+                                </div>
+
+                                <div id={card2 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+
+                                        <div className='proj-card-InnerRow'>
+
+                                            <div className='col-proj-list'>                                
+                                                <h4 id='from'>Release</h4>
+                                                <p id='to'>Late 2022</p>                                    
+                                            </div>
+
+                                            <div className='col-proj-list'>
+
+                                                <p>
+                                                    Inspired by macOS, my DevJamil - Portfolio project was built from the ground up to showcase my skills with the React front-end 
                                                     library in a desktop style user interface.
                                                 </p>
 
@@ -169,14 +238,14 @@ const Projects = (props) => {
                         <div className='project-row' id='row2'>
                             
                             <div className='project-card' id='projectCard2'>
-                                {card2 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(2)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(2)}/>}
+                                {card3 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(3)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(3)}/>}
  
                                 <div className='project-name'>
                                     <h4>Smoothie Shop Search & Sort</h4>
                                     <Smoothie id='smoothie' height="50px" width="50px" />
                                 </div>
 
-                                <div id={card2 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+                                <div id={card3 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
 
                                         <div className='proj-card-InnerRow'>
 
@@ -227,14 +296,14 @@ const Projects = (props) => {
                         <div className='project-row' id='row2'>
                             
                             <div className='project-card' id='projectCard3'>
-                                {card3 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(3)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(3)}/>}
+                                {card4 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(4)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(4)}/>}
  
                                 <div className='project-name'>
                                     <h4>Ticketing Line</h4>
                                     <Ticket height="50px" width="50px" />
                                 </div>
 
-                                <div id={card3 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+                                <div id={card4 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
 
                                         <div className='proj-card-InnerRow'>
 
@@ -285,14 +354,14 @@ const Projects = (props) => {
                         <div className='project-row' id='row3'>
                             
                             <div className='project-card' id='projectCard4'>
-                                    {card4 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(4)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(4)}/>}
+                                    {card5 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(5)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(5)}/>}
     
                                     <div className='project-name'>
                                         <h4>It'sWorthMore Hardware Diagnostic</h4>
                                         <img id="projimg" src={hardware} height="50px" width="50px" />
                                     </div>
 
-                                    <div id={card4 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+                                    <div id={card5 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
 
                                             <div className='proj-card-InnerRow'>
 
@@ -304,7 +373,7 @@ const Projects = (props) => {
                                                 <div className='col-proj-list'>
 
                                                     <p>
-                                                        Developed for It's Worth More, LLC. This desktop application detects all interal computer hardware
+                                                        Developed for It'sWorthMore.com, LLC. This desktop application detects all interal computer hardware
                                                         and allows users to test various components such as microphones, cameras, and bluetooth, to ensure 
                                                         proper functionality. 
                                                     </p>
@@ -351,14 +420,14 @@ const Projects = (props) => {
                         <div className='project-row' id='row4'>
                             
                             <div className='project-card' id='projectCard5'>
-                                        {card5 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(5)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(5)}/>}
+                                        {card6 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(6)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(6)}/>}
         
                                         <div className='project-name'>
                                             <h4>SmartChoice Bank</h4>
                                             <SmartChoiceBank height='50px' width='50px' />
                                         </div>
 
-                                        <div id={card5 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+                                        <div id={card6 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
 
                                                 <div className='proj-card-InnerRow'>
 

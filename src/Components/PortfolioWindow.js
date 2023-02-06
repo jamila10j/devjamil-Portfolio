@@ -22,7 +22,7 @@ import {ReactComponent as ModalFullscreenHover} from '../assets/WindowPane/Modal
 import { ReactComponent as ProjectsIcon } from '../assets/WindowIcons/PortfolioWindow/Projects.svg';
 
 import Projects from './PortfolioModalComponents/Projects';
-import Resume from '../assets/FileDownloads/DevJamil-Resume2021.PDF';
+import Resume from '../assets/FileDownloads/DevJamil2022.pdf';
 
 import { BiMenu } from 'react-icons/bi';
 

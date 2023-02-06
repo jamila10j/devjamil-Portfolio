@@ -28,7 +28,7 @@ import SendMessage from './ContactModalComponents/SendMessage';
 import Github from './ContactModalComponents/Github';
 import Twitter from './ContactModalComponents/Twitter';
 import LinkedIn from './ContactModalComponents/LinkedIn';
-import Resume from '../assets/FileDownloads/DevJamil-Resume2021.PDF';
+import Resume from '../assets/FileDownloads/DevJamil2022.pdf';
 
 import { BiMenu } from 'react-icons/bi';
 
