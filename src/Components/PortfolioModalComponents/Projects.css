@@ -109,13 +109,14 @@
     border-radius: 15px;
     box-shadow: 1px 1px 2px 2px rgb(0 0 0 / 30%);
     padding: 10px;
+    margin: 15px 0;
 }
 
 .techStack h3 {
     margin: 0;
 }
 
-.techStack #techStack-list {
+.techStack ul {
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -137,6 +138,32 @@
     font-size: 22px;
     min-width: fit-content;
     padding: 5px;
+}
+
+#demonstation-list li {
+    height: max-content;
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    box-shadow: 1px 1px 2px 2px rgb(0 0 0 / 30%);
+    font-size: 22px;
+    min-width: fit-content;
+    padding: 15px;
+}
+
+#boatPicture {
+    height: 195px;
+    width: 330px;
+    border: 3px solid black;
+}
+
+.player {
+    filter: drop-shadow(1px 1px 1px black);
 }
 
 .view-external {
@@ -284,6 +311,11 @@
     background: #00d2ff;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#projectCardBoat {
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 

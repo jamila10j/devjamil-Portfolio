@@ -3,7 +3,7 @@ import '../AboutModalComponents/WorkExperience.css';
 import { ReactComponent as IWM } from '../../assets/WindowIcons/AboutWindow/iwm.svg';
 import { ReactComponent as ReactSVG } from '../../assets/WindowIcons/AboutWindow/React.svg';
 import { ReactComponent as Powershell } from '../../assets/WindowIcons/AboutWindow/PowerShell.svg';
-import { ReactComponent as MatUI } from '../../assets/WindowIcons/AboutWindow/MaterialUI.svg';
+import { ReactComponent as PHP } from '../../assets/WindowIcons/AboutWindow/PHP.svg';
 import { ReactComponent as CollapsedCard } from '../../assets/WindowIcons/AboutWindow/CollapsedCard.svg';
 import { ReactComponent as ExpandedCard } from '../../assets/WindowIcons/AboutWindow/ExpandedCard.svg';
 
@@ -93,7 +93,7 @@ const WorkExperience = () => {
                                             <ul id='skills-list'>
                                                 <li>React<ReactSVG height={'40px'} width={'40px'} /></li>
                                                 <li>Windows Powershell<Powershell height={'40px'} width={'40px'} /></li>
-                                                <li>Material UI<MatUI height={'40px'} width={'40px'} /></li>
+                                                <li>PHP<PHP height={'40px'} width={'40px'} /></li>
                                             </ul>
 
                                         </div>

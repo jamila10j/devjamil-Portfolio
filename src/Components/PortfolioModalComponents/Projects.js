@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
+import ReactPlayer from 'react-player';
 import '../PortfolioModalComponents/Projects.css';
 import { BsGithub } from 'react-icons/bs'
 import { ReactComponent as CollapsedCard } from '../../assets/WindowIcons/PortfolioWindow/CollapsedCard.svg';
 import { ReactComponent as ExpandedCard } from '../../assets/WindowIcons/PortfolioWindow/ExpandedCard.svg';
 import hardware from '../../assets/WindowIcons/PortfolioWindow/diagnostic.png';
+import { ReactComponent as Phone } from '../../assets/WindowIcons/PortfolioWindow/phone.svg';
 import { ReactComponent as Inventory } from '../../assets/WindowIcons/PortfolioWindow/InventorySystem.svg';
 import { ReactComponent as PHP } from '../../assets/WindowIcons/PortfolioWindow/PHP.svg';
 import { ReactComponent as ReactSVG } from '../../assets/WindowIcons/PortfolioWindow/React.svg';
 import { ReactComponent as Smoothie } from '../../assets/WindowIcons/PortfolioWindow/Smoothie.svg';
 import { ReactComponent as C } from '../../assets/WindowIcons/PortfolioWindow/C.svg';
 import { ReactComponent as Ticket } from '../../assets/WindowIcons/PortfolioWindow/Ticket.svg';
-import { ReactComponent as MaterialUI } from '../../assets/WindowIcons/PortfolioWindow/MaterialUI.svg';
+import { ReactComponent as Boat } from '../../assets/WindowIcons/PortfolioWindow/Boat.svg';
 import { ReactComponent as Electron } from '../../assets/WindowIcons/PortfolioWindow/Electron.svg';
 import { ReactComponent as Link } from '../../assets/WindowIcons/PortfolioWindow/Link.svg';
 import { ReactComponent as SmartChoiceBank } from '../../assets/WindowIcons/PortfolioWindow/SmartChoiceBank.svg';
 import { ReactComponent as CSharp } from '../../assets/WindowIcons/PortfolioWindow/CSharp.svg';
 import { ReactComponent as SQL } from '../../assets/WindowIcons/PortfolioWindow/SQL.svg';
 import Logo from '../../assets/Logo/logo.png';
+import BoatPicture from '../../assets/Media/Boat.png';
+import BoatVideo from '../../assets/Media/BoatVideo.mov';
 
 const Projects = (props) => {
     const [card1, setCard1] = useState(false);
@@ -25,6 +29,8 @@ const Projects = (props) => {
     const [card4, setCard4] = useState(false);
     const [card5, setCard5] = useState(false);
     const [card6, setCard6] = useState(false);
+    const [card7, setCard7] = useState(false);
+    const [card8, setCard8] = useState(false);
 
 
     const expandCard = (cardNum) => {
@@ -47,6 +53,12 @@ const Projects = (props) => {
                 break;
             case 6:
                 setCard6(true);
+                break;
+            case 7:
+                setCard7(true);
+                break;
+            case 8:
+                setCard8(true);
                 break;
             default:
                 return;
@@ -74,6 +86,12 @@ const Projects = (props) => {
             case 6:
                 setCard6(false);
                 break;
+            case 7:
+                setCard7(false);
+                break;
+            case 8:
+                setCard8(false);
+                break;
             default:
                 return;
         }
@@ -89,6 +107,10 @@ const Projects = (props) => {
 
     const githubTicket = () => {
         window.open("https://github.com/jamila10j/TicketingLine", "_blank");
+    }
+
+    const githubBoat = () => {
+        window.open("https://github.com/jamila10j/AutonomousBoat", "_blank");
     }
 
     const githubBank = () => {
@@ -114,20 +136,75 @@ const Projects = (props) => {
                 </div>
 
                 <ul className='cards' id='projectCardList'>
-
-                <li>
-                        
+                    <li> 
                         <div className='project-row' id='row2'>
                             
                             <div className='project-card' id='projectCardIWMRepairs'>
                                 {card1 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(1)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(1)}/>}
  
                                 <div className='project-name'>
+                                    <h4>It'sWorthMore: Mobile Diagnostic Helper</h4>
+                                    <Phone id='iphone' height="50px" width="50px" />
+                                </div>
+
+                                <div id={card1 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+
+                                        <div className='proj-card-InnerRow'>
+
+                                            <div className='col-proj-list'>                                
+                                                <h4 id='from'>Release</h4>
+                                                <p id='to'>Early 2023</p>                                    
+                                            </div>
+
+                                            <div className='col-proj-list'>
+
+                                                <p>
+                                                    Developed for It'sWorthMore.com, LLC. This desktop application was built to gather mobile device 
+                                                    information such as IMEI Numbers, Serial Numbers, and other identifiers for the It'sWorthMore
+                                                    Mobile Diagnostic App. Automatically uploads information to an API.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div className='techStack'>          
+                                            <h3>Tech Stack</h3>
+                                            <ul id='techStack-list'>
+                                                <li>React <ReactSVG height={'40px'} width={'40px'} /></li>
+                                            </ul>
+                                        </div>
+
+                                        <div className='view-external'>          
+                                            <h3>Ways to View</h3>
+                                            <ul id='view-list'>
+                                                <li>
+                                                    See Related 
+                                                    <Link id='link' />
+                                                    <div className='arrow' onClick={requestWorkExp} />
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li> 
+                        <div className='project-row' id='row2'>
+                            
+                            <div className='project-card' id='projectCardIWMRepairs'>
+                                {card2 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(2)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(2)}/>}
+ 
+                                <div className='project-name'>
                                     <h4>It'sWorthMore Repairs: Inventory System</h4>
                                     <Inventory id='inventory' height="50px" width="50px" />
                                 </div>
 
-                                <div id={card1 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+                                <div id={card2 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
 
                                         <div className='proj-card-InnerRow'>
 
@@ -172,7 +249,6 @@ const Projects = (props) => {
                             </div>
 
                         </div>
-
                     </li>
 
                     <li>
@@ -180,14 +256,14 @@ const Projects = (props) => {
                         <div className='project-row' id='row2'>
                             
                             <div className='project-card' id='projectCard1'>
-                                {card2 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(2)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(2)}/>}
+                                {card3 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(3)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(3)}/>}
  
                                 <div className='project-name'>
                                     <h4>DevJamil - Portfolio</h4>
                                     <img id="projimg" src={Logo} />
                                 </div>
 
-                                <div id={card2 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+                                <div id={card3 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
 
                                         <div className='proj-card-InnerRow'>
 
@@ -238,14 +314,14 @@ const Projects = (props) => {
                         <div className='project-row' id='row2'>
                             
                             <div className='project-card' id='projectCard2'>
-                                {card3 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(3)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(3)}/>}
+                                {card4 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(4)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(4)}/>}
  
                                 <div className='project-name'>
                                     <h4>Smoothie Shop Search & Sort</h4>
                                     <Smoothie id='smoothie' height="50px" width="50px" />
                                 </div>
 
-                                <div id={card3 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+                                <div id={card4 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
 
                                         <div className='proj-card-InnerRow'>
 
@@ -296,14 +372,14 @@ const Projects = (props) => {
                         <div className='project-row' id='row2'>
                             
                             <div className='project-card' id='projectCard3'>
-                                {card4 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(4)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(4)}/>}
+                                {card5 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(5)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(5)}/>}
  
                                 <div className='project-name'>
                                     <h4>Ticketing Line</h4>
                                     <Ticket height="50px" width="50px" />
                                 </div>
 
-                                <div id={card4 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+                                <div id={card5 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
 
                                         <div className='proj-card-InnerRow'>
 
@@ -351,17 +427,88 @@ const Projects = (props) => {
 
                     <li>
                         
+                        <div className='project-row' id='row2'>
+                            
+                            <div className='project-card' id='projectCardBoat'>
+                                {card6 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(6)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(6)}/>}
+ 
+                                <div className='project-name'>
+                                    <h4>Autonomous Boat</h4>
+                                    <Boat height="50px" width="50px" />
+                                </div>
+
+                                <div id={card6 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+
+                                        <div className='proj-card-InnerRow'>
+
+                                            <div className='col-proj-list'>                                
+                                                <h4 id='from'>Completed</h4>
+                                                <p id='to'>Mid 2022</p>                                    
+                                            </div>
+
+                                            <div className='col-proj-list'>
+
+                                                <p>
+                                                    Written in C, this program, compiled on a microcontroller, commands a physical boat equipped 
+                                                    with a motor and rudder. Able to adjust motor speed and rudder angle based on predetermined 
+                                                    route.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div className='techStack'>          
+                                            <h3>Demonstration</h3>
+                                            <ul id='demonstation-list'>
+                                                <li>
+                                                    <div>
+                                                        <img id="boatPicture" src={BoatPicture} />
+                                                        <ReactPlayer className="player" url={BoatVideo} controls={true} muted={true} width="375px" height="230px" />
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div className='techStack'>          
+                                            <h3>Tech Stack</h3>
+                                            <ul id='techStack-list'>
+                                                <li>C <C height={'40px'} width={'40px'} /></li>
+                                            </ul>
+                                        </div>
+
+                                        <div className='view-external'>          
+                                            <h3>Ways to View</h3>
+                                            <ul id='view-list'>
+                                                <li>
+                                                    View Source Code on Github 
+                                                    <BsGithub id='githubIcon' />
+                                                    <div className='arrow' onClick={githubBoat} />
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+                        
                         <div className='project-row' id='row3'>
                             
                             <div className='project-card' id='projectCard4'>
-                                    {card5 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(5)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(5)}/>}
+                                    {card7 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(7)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(7)}/>}
     
                                     <div className='project-name'>
                                         <h4>It'sWorthMore Hardware Diagnostic</h4>
                                         <img id="projimg" src={hardware} height="50px" width="50px" />
                                     </div>
 
-                                    <div id={card5 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+                                    <div id={card7 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
 
                                             <div className='proj-card-InnerRow'>
 
@@ -386,7 +533,6 @@ const Projects = (props) => {
                                                 <h3>Tech Stack</h3>
                                                 <ul id='techStack-list'>
                                                     <li>React <ReactSVG height={'40px'} width={'40px'} /></li>
-                                                    <li>MaterialUI <MaterialUI height={'40px'} width={'40px'} /></li>
                                                     <li>Electron <Electron height={'40px'} width={'40px'} /></li>
                                                 </ul>
                                             </div>
@@ -420,14 +566,14 @@ const Projects = (props) => {
                         <div className='project-row' id='row4'>
                             
                             <div className='project-card' id='projectCard5'>
-                                        {card6 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(6)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(6)}/>}
+                                        {card8 ? <ExpandedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => collapseCard(8)}/> : <CollapsedCard id='collapsable' width={'20px'} height={'20px'} onClick={() => expandCard(8)}/>}
         
                                         <div className='project-name'>
                                             <h4>SmartChoice Bank</h4>
                                             <SmartChoiceBank height='50px' width='50px' />
                                         </div>
 
-                                        <div id={card6 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
+                                        <div id={card8 ? 'proj-card1Content-expanded' : 'proj-card1Content-collapsed'}>
 
                                                 <div className='proj-card-InnerRow'>
 
